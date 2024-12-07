@@ -1,1 +1,0 @@
-# Andrroid-Mining-Quck-Setup
