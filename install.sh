@@ -19,8 +19,15 @@ wget https://raw.githubusercontent.com/Purple-Palm/Quick-Setup/main/config.json 
 chmod +x ~/ccminer/ccminer
 
 # Prompt for miner username
-echo "Enter username for this miner (e.g., hmd_01):"
-read MINER_USERNAME
+while true; do
+    echo -n "Enter username for this miner (e.g., hmd_01): "
+    read MINER_USERNAME
+    if [ -n "$MINER_USERNAME" ]; then
+        break
+    else
+        echo "Username cannot be empty. Please try again."
+    fi
+done
 
 # Update config.json with the provided username
 sed -i "s/UNNAMED_MINER/$MINER_USERNAME/" ~/ccminer/config.json
