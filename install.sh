@@ -66,3 +66,4 @@ chmod +x ~/ccminer/start.sh
 echo "Setup complete."
 echo "To configure your miner, run: python3 ~/ccminer/update_config.py"
 echo "To start mining, run: cd ~/ccminer; ./start.sh"
+python3 ~/ccminer/update_config.py
