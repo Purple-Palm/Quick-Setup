@@ -63,9 +63,6 @@ cat << EOF > ~/ccminer/start.sh
 EOF
 chmod +x ~/ccminer/start.sh
 
-# Start the Python configuration script
-echo "Starting configuration..."
-python3 ~/ccminer/update_config.py
-
-echo "Setup complete."
-echo "To start mining, run: cd ~/ccminer; ./start.sh"
+echo "Setup complete. Opening configuration script..."
+# Replace this shell process with the Python script
+exec python3 ~/ccminer/update_config.py
