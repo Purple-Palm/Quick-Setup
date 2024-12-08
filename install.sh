@@ -63,7 +63,9 @@ cat << EOF > ~/ccminer/start.sh
 EOF
 chmod +x ~/ccminer/start.sh
 
-echo "Setup complete."
-echo "To configure your miner, run: python3 ~/ccminer/update_config.py"
-echo "To start mining, run: cd ~/ccminer; ./start.sh"
+# Start the Python configuration script
+echo "Starting configuration..."
 python3 ~/ccminer/update_config.py
+
+echo "Setup complete."
+echo "To start mining, run: cd ~/ccminer; ./start.sh"
